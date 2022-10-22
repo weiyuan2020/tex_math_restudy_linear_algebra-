@@ -9,9 +9,62 @@
 %\usepackage{subfigure}
 %%导言区域要添加以上两个包
 %\usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
-\documentclass[10pt,a4paper]{elegantbook}
-\usepackage{ctex}
-\cover{pic/cover.jpg}
+% \documentclass[10pt,a4paper]{elegantbook}
+% \usepackage{ctex}
+% \cover{pic/cover.jpg}
+
+
+\documentclass[openany,twoside,scheme=chinese,fontset=none]{ctexbook}
+\usepackage{geometry}
+\geometry{
+    paperheight=260mm,
+    paperwidth=185mm,
+    top=25mm,
+    bottom=15mm,
+    left=25mm, % 左侧留 5mm 装订线距离
+    right=15mm
+}
+
+\setmainfont{XITS}  % 英文字体， Times 风格
+
+\setCJKmainfont{Source Han Serif SC}[         % 方正书宋_GBK
+    BoldFont=Source Han Serif SC Bold,  % 思源宋体粗体
+    ItalicFont=FZKai-Z03                % 方正楷体_GBK
+    ]
+\setCJKsansfont{Source Han Sans SC}[             % 方正黑体_GBK
+    BoldFont=Source Han Sans SC Bold    % 思源黑体粗体
+    ]
+\setCJKmonofont{FZFangSong-Z02}         % 方正仿宋_GBK
+
+\setCJKfamilyfont{zhsong}{FZShuSong-Z01}
+\setCJKfamilyfont{zhxbs}{Source Han Serif SC Bold}
+\setCJKfamilyfont{zhdbs}{Source Han Serif SC Heavy}
+\setCJKfamilyfont{zhhei}{FZHei-B01}
+\setCJKfamilyfont{zhdh}{Source Han Sans SC Bold}
+\setCJKfamilyfont{zhfs}{FZFangSong-Z02}
+\setCJKfamilyfont{zhkai}{FZKai-Z03}
+
+\newcommand{\songti}{\CJKfamily{zhsong}}
+\newcommand{\xbsong}{\CJKfamily{zhxbs}}
+\newcommand{\dbsong}{\CJKfamily{zhdbs}}
+\newcommand{\heiti}{\CJKfamily{zhhei}}
+\newcommand{\dahei}{\CJKfamily{zhdh}}
+\newcommand{\fangsong}{\CJKfamily{zhfs}}
+\newcommand{\kaishu}{\CJKfamily{zhkai}}
+
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx} % \includegraphics
+\usepackage{hyperref} % \url
+\usepackage{makecell} % makecell 包 用于表格换行
+% \usepackage{amsfonts}
+% \usepackage{caption}
+% \usepackage{subfigure}
+% %导言区域要添加以上两个包
+% \usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\newtheorem{example}{例}
 \title{重修线性代数}
 \author{应行仁}
 
@@ -21,17 +74,17 @@
 	\newpage
 	\tableofcontents
 	
-	\newpage
-	\thispagestyle{empty}
+	% \newpage
+	% \thispagestyle{empty}
 	
-	\listoffigures
+	% \listoffigures
 	
 	%\listoftables
 	
-	\newpage
+	% \newpage
 	
-	\pagenumbering{arabic}
-	
+	% \pagenumbering{arabic}
+	\mainmatter
 	\include{src/chap1}
 	\include{src/chap2}
 	\include{src/chap3}
